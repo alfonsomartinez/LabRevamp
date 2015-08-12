@@ -1,0 +1,5 @@
+Create some sort of unique message in this
+file and allow students to crack it
+This could be the extra lab portion and to do
+it we could make an encryption that uses a key
+that is an entire word rather than one letter
