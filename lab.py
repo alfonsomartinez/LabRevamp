@@ -147,3 +147,24 @@ def get_letter(row, letter):
 	for i in range(len(row)):
 		if row[i] == letter:
 			return num_to_letter[i]
+
+##################
+# Extra Question #
+##################
+
+def create_list(message, key):
+	string = ''
+	place = key.upper()
+	while len(message):
+		if not place:
+			place = key.upper()
+		if message[0] == ' ':
+			string += ' '
+			pass
+		elif message[0]:
+			string += place[0]
+			place = place[1:]
+		message = message[1:]
+	return string
+
+	
