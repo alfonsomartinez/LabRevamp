@@ -151,22 +151,22 @@ def get_letter(row, letter):
 # Do Not Change Any Line Below Here #
 #####################################
 
-import csv
+# import csv
 
-results = []
-with open('lab.txt') as inputfile:
-	for line in inputfile:
-		results.append(line.strip().split(','))
+# results = []
+# with open('lab.txt') as inputfile:
+# 	for line in inputfile:
+# 		results.append(line.strip().split(','))
 
-results = flatten(results)
-result = " ".join(results)
+# results = flatten(results)
+# result = " ".join(results)
 
-final = decrypt(result, cipher, 'K')
+# final = decrypt(result, cipher, 'K')
 
-text_file = open('lab_output.txt', 'w')
-for item in final:
-	text_file.write(item)
-text_file.close()
+# text_file = open('lab_output.txt', 'w')
+# for item in final:
+# 	text_file.write(item)
+# text_file.close()
 
 
 
