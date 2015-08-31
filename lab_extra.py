@@ -51,7 +51,8 @@ def decrypt(message, board, key):
 			string += ' '
 			message = message[1:]
 		else:
-			num = get_index(row, word[0])
+			num = get_index(row, message[0])
+			print(num)
 			string += alphabet[num]
 			word = word[1:]
 			if not word:
