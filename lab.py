@@ -133,9 +133,7 @@ def get_row(board, key):
 	the first letter in your message and provided for all examples.
 
 	"""
-	for row in board:
-		if row[0] == key:
-			return row
+	return board[letter_to_num[key]]
 
 def get_letter(row, letter):
 	""" Retrieve the letter that was replaced during the encryption
@@ -148,23 +146,51 @@ def get_letter(row, letter):
 		if row[i] == letter:
 			return num_to_letter[i]
 
-##################
-# Extra Question #
-##################
 
-def create_list(message, key):
-	string = ''
-	place = key.upper()
-	while len(message):
-		if not place:
-			place = key.upper()
-		if message[0] == ' ':
-			string += ' '
-			pass
-		elif message[0]:
-			string += place[0]
-			place = place[1:]
-		message = message[1:]
-	return string
+#####################################
+# Do Not Change Any Line Below Here #
+#####################################
 
-	
+import csv
+
+results = []
+with open('lab.txt') as inputfile:
+	for line in inputfile:
+		results.append(line.strip().split(','))
+
+results = flatten(results)
+result = " ".join(results)
+
+final = decrypt(result, cipher, 'K')
+
+text_file = open('lab_output.txt', 'w')
+for item in final:
+	text_file.write(item)
+text_file.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
